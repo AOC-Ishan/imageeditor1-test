@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gemini Image Editor</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Babel Standalone for live JSX compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
       body {
         background-color: #111827; /* bg-gray-900 */
@@ -23,6 +25,7 @@
 </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- Changed type to "text/babel" and added data-type="module" for Babel to transpile -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>
